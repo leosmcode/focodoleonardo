@@ -293,7 +293,7 @@ a {
   padding-top: 32px;
   border-top: 1px solid #e8e8e8;
   display: grid;
-  grid-template-columns: 1fr 1.45fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
   gap: 40px;
   align-items: stretch;
 }
@@ -301,24 +301,74 @@ a {
 .about-heading {
   text-align: center;
   min-height: 320px;
-  padding: 40px;
+  padding: 48px clamp(24px, 5vw, 72px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: #f3f1ec;
 }
 
 .about-heading h2 {
   margin-inline: auto;
 }
 
-.about-photo {
-  width: 100%;
+.contact-panel {
   min-height: 320px;
-  border: 1px dashed #bbb7ad;
-  background: #f1efe9;
-  position: relative;
-  z-index: 2;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ddd9d1;
+}
+
+.contact-kicker {
+  margin: 0 0 26px;
+  color: #777;
+  font-size: 11px;
+  letter-spacing: .16em;
+}
+
+.contact-link {
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid #e8e5de;
+  color: #222;
+  text-decoration: none;
+}
+
+.contact-link:last-child {
+  border-bottom: 1px solid #e8e5de;
+}
+
+.contact-link span:first-child {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-link small {
+  color: #777;
+  font-size: 10px;
+  letter-spacing: .14em;
+}
+
+.contact-link strong {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 400;
+}
+
+.contact-link > span:last-child {
+  font-size: 22px;
+  transition: transform .2s ease;
+}
+
+.contact-link:hover > span:last-child,
+.contact-link:focus-visible > span:last-child {
+  transform: translate(3px, -3px);
 }
 
 .testimonials {
@@ -417,7 +467,6 @@ a {
 }
 
 .about a {
-  text-decoration-color: #aaa;
   color: #222;
 }
 
@@ -705,15 +754,15 @@ a {
     margin-top: 74px;
   }
 
-  .about-photo {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-
   .about-text {
     margin: 18px 0 0;
     padding-left: 0;
     transform: translateY(35px);
+  }
+
+  .contact-panel {
+    min-height: 0;
+    padding: 34px 26px;
   }
 
   .about.is-visible .about-text {
