@@ -293,9 +293,22 @@ a {
   padding-top: 32px;
   border-top: 1px solid #e8e8e8;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 180px 1fr 1fr;
   gap: 40px;
   align-items: start;
+}
+
+.about-photo {
+  width: 180px;
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-items: center;
+  border: 1px dashed #bbb7ad;
+  background: #f1efe9;
+  color: #96928a;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 }
 
 .testimonials {
@@ -306,10 +319,11 @@ a {
 
 .testimonials-heading {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: end;
   gap: 40px;
   margin-bottom: 48px;
+  text-align: center;
 }
 
 .testimonials-heading h2 {
@@ -612,7 +626,12 @@ a {
   }
 
   .about {
+    grid-template-columns: 150px 1fr 1fr;
     gap: 24px;
+  }
+
+  .about-photo {
+    width: 150px;
   }
 
   .testimonial-list {
@@ -669,6 +688,11 @@ a {
     grid-template-columns: 1fr;
     gap: 8px;
     margin-top: 74px;
+  }
+
+  .about-photo {
+    width: 180px;
+    margin-bottom: 24px;
   }
 
   .testimonials {
