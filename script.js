@@ -52,10 +52,12 @@ const galerias = {
     titulo: 'BODAS DE OURO',
     ano: '2026',
     fotos: [
-      'images/BODAS DE OURO/foto-01.jpg',
-      'images/BODAS DE OURO/foto-02.jpg',
-      'images/BODAS DE OURO/foto-03.jpg',
-      'images/BODAS DE OURO/foto-04.jpg'
+      'images/BODAS DE OURO/capa/capa.jpg',
+      'images/BODAS DE OURO/1.jpg',
+      'images/BODAS DE OURO/2.jpg',
+      'images/BODAS DE OURO/3.jpg',
+      'images/BODAS DE OURO/4.jpg',
+      'images/BODAS DE OURO/5.jpg'
     ]
   },
   'welness-yoga-juistreet': {
@@ -81,16 +83,6 @@ const galerias = {
       'images/WELLNESS YOGA - JUISTREET/IMG_1032.JPG',
       'images/WELLNESS YOGA - JUISTREET/IMG_1061.JPG',
       'images/WELLNESS YOGA - JUISTREET/IMG_1106.JPG'
-    ]
-  },
-  'jenny-bday-run': {
-    titulo: 'JENNY BDAY RUN',
-    ano: '2026',
-    fotos: [
-      'images/JENNY BDAY RUN/foto-01.jpg',
-      'images/JENNY BDAY RUN/foto-02.jpg',
-      'images/JENNY BDAY RUN/foto-03.jpg',
-      'images/JENNY BDAY RUN/foto-04.jpg'
     ]
   },
   'move-girls': {
