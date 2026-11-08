@@ -256,3 +256,18 @@ function atualizarNavegacaoAtiva() {
 window.addEventListener('scroll', atualizarNavegacaoAtiva, { passive: true });
 window.addEventListener('resize', atualizarNavegacaoAtiva);
 atualizarNavegacaoAtiva();
+
+const aboutSection = document.querySelector('.about');
+
+if (aboutSection) {
+  const revealAbout = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        aboutSection.classList.add('is-visible');
+        revealAbout.disconnect();
+      }
+    });
+  }, { threshold: 0.25 });
+
+  revealAbout.observe(aboutSection);
+}

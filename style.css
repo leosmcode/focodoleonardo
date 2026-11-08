@@ -293,22 +293,32 @@ a {
   padding-top: 32px;
   border-top: 1px solid #e8e8e8;
   display: grid;
-  grid-template-columns: 180px 1fr 1fr;
+  grid-template-columns: 1fr 1.45fr;
   gap: 40px;
-  align-items: start;
+  align-items: stretch;
+}
+
+.about-heading {
+  text-align: center;
+  min-height: 320px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-heading h2 {
+  margin-inline: auto;
 }
 
 .about-photo {
-  width: 180px;
-  aspect-ratio: 4 / 5;
-  display: grid;
-  place-items: center;
+  width: 100%;
+  min-height: 320px;
   border: 1px dashed #bbb7ad;
   background: #f1efe9;
-  color: #96928a;
-  font-size: 12px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
 }
 
 .testimonials {
@@ -388,13 +398,22 @@ a {
   font-weight: 400;
 }
 
-.about > p {
+.about-text {
   max-width: 470px;
-  margin: 26px 0 0;
+  margin: 26px auto 0;
+  padding-left: 0;
   color: #777;
   font-size: 15px;
   line-height: 1.8;
   letter-spacing: -.01em;
+  opacity: 0;
+  transform: translateX(-90px);
+  transition: opacity .7s ease, transform .8s cubic-bezier(.2, .7, .2, 1);
+}
+
+.about.is-visible .about-text {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .about a {
@@ -626,12 +645,8 @@ a {
   }
 
   .about {
-    grid-template-columns: 150px 1fr 1fr;
+    grid-template-columns: 1fr 1.25fr;
     gap: 24px;
-  }
-
-  .about-photo {
-    width: 150px;
   }
 
   .testimonial-list {
@@ -691,8 +706,18 @@ a {
   }
 
   .about-photo {
-    width: 180px;
+    width: 100%;
     margin-bottom: 24px;
+  }
+
+  .about-text {
+    margin: 18px 0 0;
+    padding-left: 0;
+    transform: translateY(35px);
+  }
+
+  .about.is-visible .about-text {
+    transform: translateY(0);
   }
 
   .testimonials {
