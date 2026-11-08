@@ -708,6 +708,10 @@ a {
 }
 
 @media (max-width: 650px) {
+  .contact-link > span:last-child {
+    display: none;
+  }
+
   .topbar {
     height: 58px;
     grid-template-columns: 1fr auto;
